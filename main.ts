@@ -11,8 +11,14 @@ radio.onReceivedString(function (receivedString) {
         strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     } else if (receivedString == "indigo") {
         strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
-    } else {
-    	
+    } else if (receivedString == "violet") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+    } else if (receivedString == "purple") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Purple))
+    } else if (receivedString == "white") {
+        strip.showColor(neopixel.colors(NeoPixelColors.White))
+    } else if (receivedString == "black") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Black))
     }
     strip.show()
 })

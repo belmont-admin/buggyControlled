@@ -5,6 +5,12 @@ radio.onReceivedString(function (receivedString) {
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     } else if (receivedString == "green") {
         strip.showColor(neopixel.colors(NeoPixelColors.Green))
+    } else if (receivedString == "orange") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+    } else if (receivedString == "yellow") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    } else if (receivedString == "indigo") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
     } else {
     	
     }

@@ -31,6 +31,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.right()
     } else if (receivedNumber == -1) {
         kitronik_servo_lite.backward()
+    } else if (receivedNumber == 0) {
+        kitronik_servo_lite.stop()
     } else {
         kitronik_servo_lite.stop()
     }

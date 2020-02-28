@@ -1,3 +1,15 @@
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "red") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    } else if (receivedString == "blue") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+    } else if (receivedString == "green") {
+        strip.showColor(neopixel.colors(NeoPixelColors.Green))
+    } else {
+    	
+    }
+    strip.show()
+})
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         kitronik_servo_lite.forward()
@@ -9,5 +21,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.stop()
     }
 })
+let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Heart)
 radio.setGroup(13)
+strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
+strip.setBrightness(25)

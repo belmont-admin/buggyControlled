@@ -58,7 +58,7 @@ let channel = 0
 let one = 0
 let all = 0
 all = 200
-one = 1
+one = 13
 channel = one
 basic.showIcon(IconNames.Heart)
 radio.setGroup(channel)

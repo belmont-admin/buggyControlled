@@ -32,6 +32,9 @@ input.onButtonPressed(Button.AB, function () {
     }
     radio.setGroup(channel)
 })
+input.onButtonPressed(Button.B, function () {
+    kitronik_servo_lite.stop()
+})
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         kitronik_servo_lite.forward()
@@ -46,6 +49,9 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else {
         kitronik_servo_lite.stop()
     }
+})
+input.onButtonPressed(Button.A, function () {
+    kitronik_servo_lite.stop()
 })
 let strip: neopixel.Strip = null
 let channel = 0

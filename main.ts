@@ -22,9 +22,15 @@ radio.onReceivedString(function (receivedString) {
     }
     strip.show()
 })
-input.onButtonPressed(Button.B, function () {
-    basic.showIcon(IconNames.Yes)
-    radio.setGroup(13)
+input.onButtonPressed(Button.AB, function () {
+    if (channel == one) {
+        channel = all
+        basic.showIcon(IconNames.Yes)
+    } else {
+        channel = one
+        basic.showIcon(IconNames.Heart)
+    }
+    radio.setGroup(channel)
 })
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
@@ -41,12 +47,14 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.stop()
     }
 })
-input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.Heart)
-    radio.setGroup(1)
-})
 let strip: neopixel.Strip = null
+let channel = 0
+let one = 0
+let all = 0
+all = 200
+one = 1
+channel = one
 basic.showIcon(IconNames.Heart)
-radio.setGroup(1)
+radio.setGroup(channel)
 strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
 strip.setBrightness(25)
